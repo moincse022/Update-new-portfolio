@@ -1,6 +1,8 @@
 import  { useState } from 'react';
 import { FaHome,  FaBlog, FaProjectDiagram, FaUser, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { GrMenu } from "react-icons/gr";
+import { CgClose } from "react-icons/cg";
 
 const navItems = [
   { name: 'Home', path: '/', icon: <FaHome /> },
@@ -19,9 +21,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black p-4">
+    <nav className="bg-black p-4 fixed top-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="text-white text-xl font-bold">Imtiaz</div>
+        <div className="text-white text-xl font-bold">Moin uddin</div>
         <div className="hidden md:flex space-x-4">
           {navItems.map((item) => (
             <Link
@@ -35,8 +37,8 @@ const Navbar = () => {
           ))}
         </div>
         <div className="md:hidden flex items-center">
-          <button onClick={toggleDropdown} className="text-white">
-            &#9776;
+        <button onClick={toggleDropdown} className="text-white">
+           {isOpen ? <CgClose/> : <GrMenu />}
           </button>
         </div>
       </div>

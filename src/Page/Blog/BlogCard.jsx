@@ -21,7 +21,7 @@ const BlogCard = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white">
+    <div className="mt-12 min-h-screen bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white">
       <header className="bg-black bg-opacity-50 py-8 px-4 shadow-lg">
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-4">Rizon's Tech Universe Blogs</h1>

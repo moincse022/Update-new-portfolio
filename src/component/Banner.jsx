@@ -3,7 +3,7 @@ import { motion, useAnimation, useScroll } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaLinkedin, FaArrowDown, FaFileDownload } from 'react-icons/fa';
 import { Link } from "react-scroll";
-
+import image from '../assets/Image/moin.jpg';
 const Banner = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const controls = useAnimation();
@@ -29,7 +29,8 @@ const Banner = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-black text-white">
+   <div className="relative flex min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-black text-white">
+     <div className="">
       <motion.div
         className="absolute inset-0 z-0"
         style={{
@@ -64,30 +65,27 @@ const Banner = () => {
           className="text-center"
         >
           <motion.h1 
-            className="text-6xl sm:text-8xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
+            className="text-xl sm:text-8xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 5, repeat: Infinity }}
           >
-            Imtiaz
+           Moin uddin
           </motion.h1>
           <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-300">
             <TypeAnimation
               sequence={[
                 'Full Stack Developer',
                 2000,
-                'Apps Developer',
+                'Frontend Developer',
                 2000,
                 
-                'Tech Enthusiast',
-                2000,
-                'Product Manager',
-                2000,
+               
               ]}
               wrapper="span"
               repeat={Infinity}
             />
           </h2>
-          <p className="text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-start mb-12 text-gray-400 max-w-2xl mx-auto">
             Passionate about creating innovative digital solutions that combine cutting-edge technology with intuitive design. Lets bring your ideas to life.
           </p>
 
@@ -107,7 +105,7 @@ const Banner = () => {
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(139, 92, 246, 0.6)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="contact" smooth={true} duration={500}>
+              <Link to="/contact" smooth={true} duration={500}>
                 Lets Connect
               </Link>
             </motion.button>
@@ -128,7 +126,7 @@ const Banner = () => {
                 <link.icon />
               </motion.a>
             ))}
-          </div>
+          </div> 
         </motion.div>
 
         <motion.div
@@ -137,7 +135,7 @@ const Banner = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <Link to="about" smooth={true} duration={500}>
-            <FaArrowDown className="text-3xl text-purple-500 cursor-pointer" />
+            <FaArrowDown className="text-3xl text-purple-500 cursor-pointer mx-auto text-center" />
           </Link>
         </motion.div>
       </div>
@@ -152,6 +150,10 @@ const Banner = () => {
         animate={controls}
       />
     </div>
+      <div className="">
+      <img src={image} alt="" className="w-96 h-96 bg-purple-500   rounded-full absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 z-10" />
+      </div>
+   </div>
   );
 };
 
