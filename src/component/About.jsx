@@ -46,7 +46,7 @@ const About = () => {
           variants={itemVariants}
         >
           <h1 className="text-4xl font-bold mb-6 text-center text-purple-300">
-            Imtiaz
+            Moin uddin
           </h1>
           <p className="text-gray-300 mb-8 text-lg leading-relaxed">
             As a Full Stack Developer turned Product Manager, I bring a unique blend of technical expertise and strategic vision to the tech industry. My journey in software development, coupled with my current role in product management, allows me to bridge the gap between innovative ideas and their practical implementation.
