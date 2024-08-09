@@ -33,28 +33,26 @@ const Contact = () => {
 
   const experience = [
     {
-      company: 'Z8-Tech',
-      role: 'Product Manager',
-      period: '2023 - Present',
-      description: 'Leading product development and strategy'
+      company: 'createCare',
+      role: 'MERN Stack Developer',
+      period: '2024 - Present',
+      description: 'Developed end-to-end web solutions using MERN stack, implemented RESTful APIs, and optimized application performance.'
+
     },
     {
       company: 'Authentic Four Technology',
       role: 'Full Stack Developer',
-      period: '2022 - 2023',
-      description: 'Developed end-to-end web solutions'
+      period: '2023 - 2024',
+      description: 'Developed end-to-end web solutions using MERN stack, implemented RESTful APIs, and optimized application performance.'
+
     },
+
     {
       company: 'Authentic Four Technology',
-      role: 'Flutter cum Android Developer',
-      period: '2021 - 2022',
-      description: 'Created cross-platform mobile applications'
-    },
-    {
-      company: 'Authentic Four Technology',
-      role: 'Junior Android Developer',
-      period: '2019 - 2021',
-      description: 'Developed Android applications'
+      role: 'Frontend developer',
+      period: '2023 - 2024',
+      description: 'Developed end-to-end web solutions using MERN stack, implemented RESTful APIs, and optimized application performance.'
+
     }
   ];
 

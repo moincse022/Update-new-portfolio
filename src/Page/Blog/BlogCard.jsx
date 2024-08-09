@@ -24,7 +24,7 @@ const BlogCard = () => {
     <div className="mt-12 min-h-screen bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white">
       <header className="bg-black bg-opacity-50 py-8 px-4 shadow-lg">
         <div className="container mx-auto">
-          <h1 className="text-5xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-4">Rizon's Tech Universe Blogs</h1>
+          <h1 className="text-5xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-4">Moin's Tech Universe Blogs</h1>
           <p className="text-xl text-center text-gray-300">Exploring the Frontiers of Web Development, DevOps, and Data Management</p>
           <div className="mt-8 max-w-xl mx-auto">
             <div className="relative">

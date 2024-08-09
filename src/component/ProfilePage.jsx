@@ -2,48 +2,37 @@ import { useState, useEffect } from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGlobe, FaPython, FaJsSquare, FaPhp, FaJava, FaAndroid, FaLaravel, FaReact, FaVuejs } from 'react-icons/fa';
-import { SiTypescript, SiCplusplus, SiSolidity, SiFlutter } from 'react-icons/si';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGlobe, FaPython, FaJsSquare, FaPhp, FaJava, FaAndroid, FaLaravel, FaReact, FaVuejs, FaBootstrap } from 'react-icons/fa';
+import { SiTypescript, SiCplusplus, SiSolidity, SiTailwindcss, SiExpress, SiRedux} from 'react-icons/si'; // Corrected import
 import { MdWork, MdSchool } from 'react-icons/md';
+import { DiMaterializecss } from 'react-icons/di';
+
 
 const ProfilePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const profileData = {
     personalInfo: {
-      name: "Imtiaz",
-      title: "Product Manager | Full Stack Developer",
-      email: "imtiaz@example.com",
-      phone: "+880 1234567890",
-      location: { city: "Dhaka", country: "Bangladesh" },
-      summary: "Experienced Product Manager and Full Stack Developer with a strong background in mobile and web development. Skilled in multiple programming languages and frameworks, with a track record of successful project delivery and team leadership.",
+      name: "Moin Uddin",
+      title: "Frontend Developer | Full Stack Developer",
+      email: "moincse022@gmail.com",
+      phone: "+8801935038653",
+      location: { city: "Khulna", country: "Bangladesh" },
+      summary: "Experienced frontend developer and Full Stack Developer with a strong background in mobile and web development. Skilled in multiple programming languages and frameworks, with a track record of successful project delivery and team leadership.",
       links: {
-        linkedin: "https://www.linkedin.com/in/imtiaz",
-        github: "https://github.com/imtiaz",
-        website: "https://imtiaz-portfolio.example.com"
+        linkedin: "https://www.linkedin.com/in/moin-uddin022/",
+        github: "https://github.com/moincse022",
+        website: "https://moin-portfolio.example.com"
       }
     },
     workExperience: [
       {
-        title: "Product Manager",
-        company: "Z8-Tech",
+        title: "Frontend Developer",
+        company: "CreatoCare IT Solutions",
         location: "Bangladesh",
-        startDate: "2023",
+        startDate: "2024",
         endDate: "Present",
         current: true,
-        responsibilities: [
-          "Lead product development and strategy",
-          "Coordinate cross-functional teams to deliver high-quality products",
-          "Analyze market trends and user feedback to drive product improvements"
-        ]
-      },
-      {
-        title: "Full Stack Developer",
-        company: "Authentic Four Technology",
-        location: "Bangladesh",
-        startDate: "2022",
-        endDate: "2023",
-        current: false,
         responsibilities: [
           "Developed and maintained full-stack web applications",
           "Collaborated with design and backend teams to implement new features",
@@ -51,21 +40,8 @@ const ProfilePage = () => {
         ]
       },
       {
-        title: "Flutter cum Android Developer",
-        company: "Authentic Four Technology",
-        location: "Bangladesh",
-        startDate: "2021",
-        endDate: "2022",
-        current: false,
-        responsibilities: [
-          "Built cross-platform mobile applications using Flutter",
-          "Maintained and updated existing Android applications",
-          "Implemented responsive and user-friendly mobile interfaces"
-        ]
-      },
-      {
-        title: "Junior Android Developer",
-        company: "Authentic Four Technology",
+        title: "MERN Stack Developer",
+        company: "XYZ Technology",
         location: "Bangladesh",
         startDate: "2019",
         endDate: "2021",
@@ -80,9 +56,9 @@ const ProfilePage = () => {
     education: [
       {
         degree: "Bachelor in Computer Science and Engineering",
-        institution: "University Name",
-        period: "2021 - Present (Expected completion in 4 months)",
-        gpa: "CGPA: 3.72 (for current 145 ECTs)",
+        institution: "Bangabandhu Sheikh Mujibur Rahman Science and Technology University",
+        period: "2018 - Present (Expected completion in 4 months)",
+        gpa: "CGPA: 3.05 out of 4.00",
         achievements: [
           "Completed 145 ECTs",
           "Participated in multiple hackathons and coding competitions"
@@ -90,28 +66,18 @@ const ProfilePage = () => {
       },
       {
         degree: "Higher Secondary Certificate (12th Standard)",
-        institution: "Institution Name",
-        period: "2021",
-        result: "GPA: 3.98 out of 5",
+        institution: "Khulna Public College",
+        period: "2015",
+        result: "GPA: 4.50 out of 5",
         achievements: [
           "Science Club Member",
           "Participated in national level science fair"
         ]
-      },
-      {
-        degree: "Secondary School Certificate (10th Standard)",
-        institution: "Islamia University College",
-        period: "2017",
-        result: "GPA: 4.86 out of 5",
-        achievements: [
-          "Achieved excellent academic performance",
-          "Active member of the school's programming club"
-        ]
       }
     ],
     skills: {
-      languages: ["Python", "JavaScript", "TypeScript", "PHP", "Java", "C/C++", "Solidity"],
-      frameworks: ["Native Android", "Flutter", "Laravel", "ReactJs", "VueJs"]
+      languages: [ "JavaScript", "TypeScript", "PHP", "C/C++", "Solidity","Redux"],
+      frameworks: ["Tailwind css", "Bootstrap", "Material UI", "Express.js", "ReactJs", "VueJs"]
     }
   };
 
@@ -151,12 +117,14 @@ const ProfilePage = () => {
     JavaScript: <FaJsSquare />,
     TypeScript: <SiTypescript />,
     PHP: <FaPhp />,
-    Java: <FaJava />,
+    // Java: <FaJava/>,
     "C/C++": <SiCplusplus />,
     Solidity: <SiSolidity />,
-    "Native Android": <FaAndroid />,
-    Flutter: <SiFlutter />,
-    Laravel: <FaLaravel />,
+    redux:<SiRedux/>,
+    "Tailwind css": <SiTailwindcss />, // Consistent with profileData
+    Bootstrap: <FaBootstrap />, // Corrected key
+    "Material UI": <DiMaterializecss/>, // Corrected import and key
+    Laravel: <SiExpress/>,
     ReactJs: <FaReact />,
     VueJs: <FaVuejs />
   };
@@ -277,8 +245,6 @@ const ProfilePage = () => {
           </div>
         </animated.section>
       </main>
-      
-      
     </div>
   );
 };

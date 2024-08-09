@@ -3,7 +3,7 @@ import { motion, useAnimation, useScroll } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaLinkedin, FaArrowDown, FaFileDownload } from 'react-icons/fa';
 import { Link } from "react-scroll";
-import image from '../assets/Image/moin.jpg';
+import resume from '../assets/Resume/moinuddinResume.pdf';
 const Banner = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const controls = useAnimation();
@@ -24,13 +24,13 @@ const Banner = () => {
   }, [controls, scrollY]);
 
   const socialLinks = [
-    { icon: FaGithub, url: "https://github.com/yourusername", label: "GitHub" },
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/yourusername/", label: "LinkedIn" },
+    { icon: FaGithub, url: "https://github.com/moincse022", label: "GitHub" },
+    { icon: FaLinkedin, url: "https://www.linkedin.com/in/moin-uddin022/", label: "LinkedIn" },
   ];
 
   return (
    <div className="relative flex min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 to-black text-white">
-     <div className="">
+   
       <motion.div
         className="absolute inset-0 z-0"
         style={{
@@ -98,17 +98,20 @@ const Banner = () => {
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(79, 70, 229, 0.6)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <FaFileDownload className="mr-2" /> Download CV
+              {/* <FaFileDownload className="mr-2" /> Download CV */}
+              <a href={resume} download="Resume">Download CV</a>
             </motion.a>
+            <Link to="/contact" smooth={true} duration={500}>
             <motion.button
               className="px-8 py-3 bg-transparent border-2 border-purple-500 text-purple-500 font-bold rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:bg-purple-500 hover:text-white"
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(139, 92, 246, 0.6)" }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" smooth={true} duration={500}>
+             
                 Lets Connect
-              </Link>
+             
             </motion.button>
+            </Link>
           </div>
 
           <div className="flex justify-center gap-6 mb-12">
@@ -150,10 +153,7 @@ const Banner = () => {
         animate={controls}
       />
     </div>
-      <div className="">
-      <img src={image} alt="" className="w-96 h-96 bg-purple-500   rounded-full absolute top-1/2 left-3/4 transform -translate-x-1/2 -translate-y-1/2 z-10" />
-      </div>
-   </div>
+  
   );
 };
 

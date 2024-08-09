@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhone, FaCalendarAlt, FaBriefcase, FaCode, FaTrophy } from 'react-icons/fa';
-import { SiReact, SiJavascript, SiTypescript, SiPython, SiPhp,  SiCplusplus, SiSolidity, SiFlutter, SiLaravel, SiVuedotjs, SiAndroid } from 'react-icons/si';
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhone, FaCalendarAlt, FaTrophy, FaNodeJs } from 'react-icons/fa';
+import { SiReact, SiJavascript, SiTypescript, SiPython, SiPhp,  SiCplusplus,  SiLaravel, SiVuedotjs, SiAndroid, SiMongodb, SiRedux } from 'react-icons/si';
+import { TbSql } from 'react-icons/tb';
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState('experience');
+  const [activeTab, setActiveTab] = useState('skills');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -23,59 +24,67 @@ const Portfolio = () => {
     { name: 'PHP', icon: <SiPhp />, color: 'text-purple-400' },
    
     { name: 'C/C++', icon: <SiCplusplus />, color: 'text-blue-500' },
-    { name: 'Solidity', icon: <SiSolidity />, color: 'text-gray-400' },
-    { name: 'Android', icon: <SiAndroid />, color: 'text-green-500' },
-    { name: 'Flutter', icon: <SiFlutter />, color: 'text-cyan-400' },
+    { name: 'MongoDB', icon: <SiMongodb/>, color: 'text-gray-400' },
+    { name: 'Node.js', icon: <FaNodeJs />, color: 'text-green-500' },
+    { name: 'SQL', icon: <TbSql/>, color: 'text-cyan-400' },
     { name: 'Laravel', icon: <SiLaravel />, color: 'text-red-600' },
     { name: 'React', icon: <SiReact />, color: 'text-blue-400' },
     { name: 'Vue.js', icon: <SiVuedotjs />, color: 'text-green-500' },
+    { name: 'Redux', icon: <SiRedux/>, color: 'text-green-500' },
   ];
 
   const experience = [
     {
-      company: 'Z8-Tech',
-      role: 'Product Manager',
-      period: '2023 - Present',
-      description: 'Leading product development, defining product strategy, and coordinating between development teams and stakeholders.'
+      company: 'createCare',
+      role: 'MERN Stack Developer',
+      period: '2024 - Present',
+      description: 'Developed end-to-end web solutions using MERN stack, implemented RESTful APIs, and optimized application performance.'
+
     },
     {
       company: 'Authentic Four Technology',
       role: 'Full Stack Developer',
-      period: '2022 - 2023',
+      period: '2023 - 2024',
       description: 'Developed end-to-end web solutions using MERN stack, implemented RESTful APIs, and optimized application performance.'
+
     },
+
     {
       company: 'Authentic Four Technology',
-      role: 'Flutter cum Android Developer',
-      period: '2021 - 2022',
-      description: 'Created cross-platform mobile applications using Flutter and maintained existing Android applications.'
-    },
-    {
-      company: 'Authentic Four Technology',
-      role: 'Junior Android Developer',
-      period: '2019 - 2021',
-      description: 'Developed Android applications, fixed bugs, and implemented new features in existing apps.'
+      role: 'Frontend developer',
+      period: '2023 - 2024',
+      description: 'Developed end-to-end web solutions using MERN stack, implemented RESTful APIs, and optimized application performance.'
+
     }
   ];
 
   const projects = [
     {
-      name: 'E-commerce Platform',
-      description: 'A full-stack e-commerce solution with React frontend and Node.js backend.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      link: 'https://github.com/yourusername/ecommerce-platform'
+      name: 'Build a Resume and Cover Letter ',
+      description: 'Users can easily practice quiz such asJavascript and react.Users can easily create and share resumes,CV,or coverletters with unique links or QR codes.',
+      technologies: ['Javascript','React', 'Node.js', 'MongoDB', 'Express','Firebase'],
+      liveLink: 'https://resu-magnet-frontend.vercel.app/',
+      ClientLink: 'https://github.com/teamkingsman/resuMagnet-frontend',
+      serverLink: ' https://github.com/teamkingsman/resuMagnet-backend/'
+     
     },
     {
-      name: 'Task Management App',
-      description: 'A Flutter-based mobile app for task management with real-time synchronization.',
-      technologies: ['Flutter', 'Firebase', 'Dart'],
-      link: 'https://github.com/yourusername/task-management-app'
+      name: 'Online Gas Booking System',
+      description: 'Users and Admin can sign up and log in to this website using google. A user shows all the products and booking a package.Admin see all the gas order given by user',
+      technologies: ['Javascript','React', 'Node.js', 'MongoDB', 'Express','Firebase'],
+      liveLink: 'https://timely-froyo-1f829b.netlify.app/',
+      ClientLink: 'https://github.com/moincse022/Online-gas-booking-client',
+      serverLink: 'https://github.com/moincse022/Online-gas-booking-system',
+
     },
     {
-      name: 'Blockchain Voting System',
-      description: 'A decentralized voting system built on Ethereum using Solidity smart contracts.',
-      technologies: ['Solidity', 'Web3.js', 'React'],
-      link: 'https://github.com/yourusername/blockchain-voting'
+      name: 'Resturant Management System',
+      description: ' Users and Admin can sign up and log in to this website using google.Users can place orders, see their order list, and give a review of a service.',
+      technologies: ['Javascript','React', 'Node.js', 'MongoDB', 'Express','Firebase'],
+      liveLink: 'https://coffee-store-82b59.web.app/',
+      ClientLink: 'https://github.com/moincse022/final-project',
+      serverLink: 'https://github.com/moincse022/Final-project-server'
+
     }
   ];
 
@@ -186,9 +195,17 @@ const Portfolio = () => {
                         <span key={techIndex} className="bg-blue-500 text-xs px-2 py-1 rounded">{tech}</span>
                       ))}
                     </div>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
-                      View Project <FaGithub className="inline" />
+                   <div className="flex gap-4">
+                   <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                      Live <FaGithub className="inline" />
                     </a>
+                    <a href={project.ClientLink} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                      client <FaGithub className="inline" />
+                    </a>
+                    <a href={project.serverLink} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                      server <FaGithub className="inline" />
+                    </a>
+                   </div>
                   </motion.div>
                 ))}
               </div>
@@ -215,10 +232,10 @@ const Portfolio = () => {
           <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
           <div className="flex justify-center space-x-8">
             {[
-              { icon: <FaGithub />, link: 'https://github.com/yourusername' },
-              { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/yourprofile' },
+              { icon: <FaGithub />, link: 'https://github.com/moincse022' },
+              { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/moin-uddin022/' },
               { icon: <FaEnvelope />, link: 'mailto:your.email@example.com' },
-              { icon: <FaPhone />, link: 'tel:+1234567890' },
+              { icon: <FaPhone />, link: 'tel:+8801935038653' },
             ].map((social, index) => (
               <motion.a 
                 key={index}
@@ -240,3 +257,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+

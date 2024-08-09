@@ -55,24 +55,16 @@ const About = () => {
           <motion.div className="space-y-6" variants={containerVariants}>
             <InfoItem 
               icon={FaCode}
-              title="Full Stack Development"
-              description="Proficient in Python, JavaScript, TypeScript, PHP, Java, and C/C++. Experienced with React, Vue.js, Flutter, and Laravel frameworks."
+              title="MERN Stack Development"
+              description="Proficient in ,Matarial Ui,JavaScript, TypeScript, and C/C++. Experienced with React, Vue.js frameworks."
             />
             <InfoItem 
               icon={FaDatabase}
               title="Backend & Databases"
               description="Skilled in Node.js, Express.js, and working with both SQL and NoSQL databases like MySQL and MongoDB."
             />
-            <InfoItem 
-              icon={FaMobileAlt}
-              title="Mobile Development"
-              description="Experienced in Native Android and Flutter for cross-platform mobile app development."
-            />
-            <InfoItem 
-              icon={FaProjectDiagram}
-              title="Product Management"
-              description="Currently leading product development initiatives at Z8-Tech, coordinating cross-functional teams, and ensuring successful product launches."
-            />
+        
+     
             <InfoItem 
               icon={FaUserTie}
               title="Leadership & Communication"
@@ -81,7 +73,7 @@ const About = () => {
             <InfoItem 
               icon={FaGraduationCap}
               title="Education"
-              description="Pursuing a Bachelor's in Computer Science and Engineering at Mawlana Bhasani Science and Technology University (2021 - Present)."
+              description="Pursuing a Bachelor's in Computer Science and Engineering at Bangabandhu Sheikh Mujibur Rahman Science and Technology University,Gopalgonj (2028 - 2024)."
             />
           </motion.div>
 
@@ -90,7 +82,7 @@ const About = () => {
             variants={itemVariants}
           >
             <motion.a
-              href="https://github.com/rahatutzaman-rizon"
+              href="https://github.com/moincse022"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -99,7 +91,7 @@ const About = () => {
               <FaGithub size={24} />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/rahatutzaman-rizon-373529172/"
+              href="https://www.linkedin.com/in/moin-uddin022/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -108,7 +100,7 @@ const About = () => {
               <FaLinkedinIn size={24} />
             </motion.a>
             <motion.a
-              href="mailto:rizonrahat199@gmail.com"
+              href="mailto:moincse022@gmail.com"
               whileHover={{ scale: 1.1 }}
               className="text-purple-300 hover:text-purple-400"
             >
