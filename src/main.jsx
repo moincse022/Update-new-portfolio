@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import "./index.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import App from "./App";
@@ -40,24 +38,14 @@ const router = createBrowserRouter([
         path: "/achivement",
         element: <Portfolio></Portfolio>,
       },
-      // {
-      //   path: "/project",
-      //   element:<AllProjects></AllProjects>,
-      // },
-      // {
-      //   path: "/project/:id",
-      //   element:<SingleProject></SingleProject>,
-      // },
+
 
       {
         path: "/about",
         element: <About></About>,
       },
 
-      // {
-      //   path: "/gallery",
-      //   element:<Gallery></Gallery>,
-      // },
+
     ],
   },
 ]);

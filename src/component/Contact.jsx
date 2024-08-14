@@ -1,7 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhone, FaCalendarAlt } from 'react-icons/fa';
-import { SiReact, SiJavascript, SiTypescript, SiPython, SiPhp,  SiCplusplus, SiSolidity, SiFlutter, SiLaravel, SiVuedotjs, SiTailwindcss, SiExpress, SiMongodb } from 'react-icons/si';
+import { SiReact, SiJavascript, SiTypescript, SiPython, SiPhp,  SiCplusplus, SiSolidity, SiFlutter, SiLaravel, SiVuedotjs, SiTailwindcss, SiExpress, SiMongodb, SiMysql } from 'react-icons/si';
 
 const Contact = () => {
   const containerVariants = {
@@ -23,7 +23,7 @@ const Contact = () => {
     
     { name: 'C/C++', icon: <SiCplusplus />, color: 'text-blue-500' },
     { name: 'Solidity', icon: <SiSolidity />, color: 'text-gray-400' },
-    { name: 'Flutter', icon: <SiFlutter />, color: 'text-cyan-400' },
+    { name: 'MYSQL', icon: <SiMysql/>, color: 'text-cyan-400' },
     { name: 'Laravel', icon: <SiLaravel />, color: 'text-red-600' },
     { name: 'Vue.js', icon: <SiVuedotjs />, color: 'text-green-500' },
     { name: 'Express.js', icon: <SiExpress />, color: 'text-white' },
@@ -119,10 +119,10 @@ const Contact = () => {
             
             <motion.div className="flex justify-center space-x-8" variants={itemVariants}>
               {[
-                { icon: <FaGithub />, link: 'https://github.com/rahatutzaman-rizon' },
-                { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/rahatutzaman-rizon-373529172/' },
-                { icon: <FaEnvelope />, link: 'mailto:rizonrahat199@gmail.com' },
-                { icon: <FaPhone />, link: 'tel:+8801771276400' },
+                { icon: <FaGithub />, link: 'https://github.com/moincse022' },
+                { icon: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/moin-uddin022/' },
+                { icon: <FaEnvelope />, link: 'mailto:moincse022@gmail.com' },
+                { icon: <FaPhone />, link: 'tel:+8801935038653' },
               ].map((social, index) => (
                 <motion.a 
                   key={index}

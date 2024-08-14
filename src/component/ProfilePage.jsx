@@ -77,7 +77,7 @@ const ProfilePage = () => {
     ],
     skills: {
       languages: [ "JavaScript", "TypeScript", "PHP", "C/C++", "Solidity","Redux"],
-      frameworks: ["Tailwind css", "Bootstrap", "Material UI", "Express.js", "ReactJs", "VueJs"]
+      frameworks: ["Tailwind css", "Bootstrap", "Material UI", "Express", "ReactJs", "VueJs"]
     }
   };
 
@@ -113,18 +113,18 @@ const ProfilePage = () => {
   ];
 
   const skillIcons = {
-    Python: <FaPython />,
+    // Python: <FaPython />,
     JavaScript: <FaJsSquare />,
     TypeScript: <SiTypescript />,
     PHP: <FaPhp />,
     // Java: <FaJava/>,
     "C/C++": <SiCplusplus />,
     Solidity: <SiSolidity />,
-    redux:<SiRedux/>,
+    Redux:<SiRedux/>,
     "Tailwind css": <SiTailwindcss />, // Consistent with profileData
     Bootstrap: <FaBootstrap />, // Corrected key
     "Material UI": <DiMaterializecss/>, // Corrected import and key
-    Laravel: <SiExpress/>,
+    Express: <SiExpress/>,
     ReactJs: <FaReact />,
     VueJs: <FaVuejs />
   };

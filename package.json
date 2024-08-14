@@ -1,5 +1,5 @@
 {
-  "name": "imtaiz-portfolio",
+  "name": "moinuddin-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "axios": "^1.7.3",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.21",

@@ -5,20 +5,33 @@ import { FaCalendar, FaUser, FaClock, FaTags } from 'react-icons/fa';
 const SingleBlog = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://myportfolio-server.vercel.app/blog/${id}`)
+    fetch(`https://moinuddin-portfolio-server.vercel.app/blog/${id}`)
       .then(response => response.json())
-      .then(data => setPost(data))
-      .catch(error => console.error('Error fetching blog post:', error));
+      .then(data => {
+        setPost(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching blog post:', error);
+        setError('Failed to load the blog post.');
+        setLoading(false);
+      });
   }, [id]);
 
-  if (!post) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return <div className="text-center text-white">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500">{error}</div>;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br mt-8 from-sky-900 via-blue-900 to-indigo-900 text-white p-8">
       <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-900 to-blue-900 p-8 rounded-xl shadow-2xl">
         <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-700">{post.title}</h2>
         <div className="flex flex-wrap justify-between items-center text-gray-400 mb-4">

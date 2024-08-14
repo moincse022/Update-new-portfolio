@@ -1,18 +1,44 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaSearch, FaCalendar, FaUser, FaClock, FaTags } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const BlogCard = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true); // State to manage loading state
+  const [error, setError] = useState(null); // State to manage error state
 
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/blog')
+  //     .then(response => response.json())
+  //     .then(data => setBlogPosts(data))
+  //     .catch(error => console.error('Error fetching blog posts:', error));
+  // }, []);
   useEffect(() => {
-    fetch('https://myportfolio-server.vercel.app/blog')
-      .then(response => response.json())
-      .then(data => setBlogPosts(data))
-      .catch(error => console.error('Error fetching blog posts:', error));
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://moinuddin-portfolio-server.vercel.app/blog'); // Fetch data using axios
+        setBlogPosts(response.data); 
+         setLoading(false); // Set loading state to false after fetching
+      } catch (error) {
+        setError(error); // Set error state if there's an error
+      } finally {
+        setLoading(false); // Set loading state to false after fetching
+      }
+    };
+
+    fetchData(); // Call the fetchData function
+  }, []); // Empty dependency array means this effect runs once when the component mounts
+
+  if (loading) {
+    return <div>Loading...</div>; // Show a loading message while data is being fetched
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>; // Show an error message if there's an error
+  }
 
   const filteredPosts = blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -50,7 +76,7 @@ const BlogCard = () => {
         >
           {filteredPosts.map((post, index) => (
             <motion.article
-              key={index}
+              key={post._id} // Using unique key from post._id
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
