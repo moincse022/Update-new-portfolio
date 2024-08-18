@@ -22,12 +22,13 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     emailjs.sendForm(
-      'service_t14ijf2',
-      'template_s1dxxj8',
+      'service_rgeoe5h',
+      'template_54dpe5c',
       form.current,
-      'Y4FN7ZSrW0VCQal-t'
+      'eF4dvo3nRZsJ9smXd'
     )
-      .then(() => {
+      .then((result) => {
+        console.log(result);
         setSubmitStatus('success');
         setFormData({ name: '', email: '', message: '' });
       })

@@ -7,7 +7,18 @@
     <title>Moinuddin</title>
   </head>
   <body class="scroll-smooth">
-    <div id="root"></div>
+    <div id="root">
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "eF4dvo3nRZsJ9smXd",
+      });
+   })();
+</script>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

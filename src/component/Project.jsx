@@ -103,35 +103,35 @@ const Portfolio = () => {
       initial="hidden"
       animate="visible"
     >
-      <motion.h1 className="text-5xl font-bold mb-8 text-center" variants={itemVariants}>
+      <motion.h1 className="text-3xl md:text-5xl font-bold mb-8 text-center" variants={itemVariants}>
         Product Manager & Full-Stack Developer
       </motion.h1>
 
-      <motion.div className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md rounded-lg p-8 shadow-2xl" variants={itemVariants}>
-        <div className="flex justify-center mb-8">
+      <motion.div className="mx-auto bg-white/10 backdrop-blur-md rounded-lg p-8 shadow-2xl" variants={itemVariants}>
+        <div className="flex justify-center  mb-8">
         <button 
             onClick={() => setActiveTab('projects')} 
-            className={`px-4 py-2 mx-2 rounded ${activeTab === 'projects' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
+            className={`px-1 md:px-4 text-sm md:text-lg py-2 md:py-2 mx-1 md:mx-2  rounded ${activeTab === 'projects' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
           >
             Projects
           </button>
          
           <button 
             onClick={() => setActiveTab('experience')} 
-            className={`px-4 py-2 mx-2 rounded ${activeTab === 'experience' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
+            className={`px-1 md:px-4 py-1 text-sm md:text-lg md:py-2 mx-1 md:mx-2 rounded ${activeTab === 'experience' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
           >
             Experience
           </button>
           <button 
             onClick={() => setActiveTab('skills')} 
-            className={`px-4 py-2 mx-2 rounded ${activeTab === 'skills' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
+            className={`px-1 md:px-4 text-sm md:text-lg py-1 md:py-2 mx-1 md:mx-2 rounded ${activeTab === 'skills' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
           >
             Skills
           </button>
         
           <button 
             onClick={() => setActiveTab('achievements')} 
-            className={`px-4 py-2 mx-2 rounded ${activeTab === 'achievements' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
+            className={`px-1 md:px-4 text-sm md:text-lg  py-1 md:py-2 mx-1 md:mx-2 rounded ${activeTab === 'achievements' ? 'bg-cyan-500 text-white' : 'bg-gray-700'}`}
           >
             Achievements
           </button>
